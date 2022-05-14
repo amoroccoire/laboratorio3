@@ -7,11 +7,9 @@
     <meta name="description" content="Lab 3">
 	<meta name="generator"content="Vim y Visual Studio" />
 	
-    <!--<link href="estilos.css" rel="stylesheet">-->
-	<!--<style></style>-->
-	<!--<script src="https://code.jquery.com/jquery-3.5.0.js"></script>-->
-	<!--<script src="script.js"></script>-->
-	<!--<script></script>-->
+    <link href="estilos.css" rel="stylesheet">
+	<script src="script.js"></script>
+
 </head>  
 <body>    
     <header>
@@ -19,12 +17,17 @@
     </header>
 
     <section>      
-        <p onclick="">Ingresar Texto</p>
-        <p onclick="listMarkdown()">Listar</p>
-        <p onclick="">Mostrar</p>
+        <nav>
+            <p onclick="guardarMardown()">Ingresar Texto</p>
+            <p onclick="listMarkdown()">Listar</p>
+            <p onclick="VerMarkdownHtml()">Mostrar</p>
+        </nav>
     </section>
     <section>
-        <div id=""></div>
+        <div id="main">
+            <h1>Respuesta del JS</h1>
+        </div>
+        
     </section>
     <footer>
     </footer>
