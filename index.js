@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const express = require('express');
 const app = express();
+const MarkdownIt = require('markdown-it'),
+	md = new MarkdownIt();
 
 app.use(express.static('priv'))
 
@@ -16,4 +18,13 @@ app.get('/', (request, response) => {
 app.get('/contenido', (request, response) => {
 	response.header('Content-Type', 'application/json');
 	response.sendFile(path.resolve(__dirname, 'priv/contenido.json'));
+});
+
+app.post('/markdown', (request, response) => {
+	let markDownText = request.body.text;
+	let htmlText = md.render(markDownText);
+	response.setHeader('Content-Type', 'application/json');
+	response.end(JSON.stringify({
+		markdown: htmlText
+	}))
 });
