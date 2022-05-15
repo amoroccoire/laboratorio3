@@ -12,3 +12,8 @@ app.listen(3000, () => {
 app.get('/', (request, response) => {
 	response.sendFile(path.resolve(__dirname, 'index.html'))
 });
+
+app.get('/contenido', (request, response) => {
+	response.header('Content-Type', 'application/json');
+	response.sendFile(path.resolve(__dirname, 'priv/contenido.json'));
+});
