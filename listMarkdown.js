@@ -11,6 +11,7 @@ function listMarkdown () {
 				let title = data.texts[i].title;
 				listHtml += `<h3>${title}</h3>\n<button onclick='verMarkdownHtml("${title}")'>Ver Markdown</button><hr>\n`;
 			}
+			listDiv.innerHTML = listHtml;
 		}
 	);
 }
