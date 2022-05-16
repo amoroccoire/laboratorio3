@@ -6,7 +6,6 @@ const MarkdownIt = require('markdown-it'),
     md = new MarkdownIt();
 
 add.use(express.static('priv'));
-app.use(express.static('pub'));//para que index.js acceda a pub/index.html
 
 app.listen(3000, () => {
     console.log("Escuchando en: http://localhost:3000")
