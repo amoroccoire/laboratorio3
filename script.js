@@ -34,3 +34,20 @@ app.post('/markdown', (request, response) => {
 		markdown: htmlText
 	}))
 });
+
+app.post('/', (request, response) => {
+	fs.appendFile('priv/' + request.body.title + '.md', request.body.text, function (err){
+		if (err){
+			console.error(err)
+			response.status(500).json({
+				error: 'message'
+			})
+			return
+		}
+		response.end(JSON.stringify({
+			text: "Su archivo ha sido guardado con exito"
+		}))
+	})
+})
+
+
