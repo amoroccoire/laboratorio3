@@ -10,4 +10,20 @@ function guardarMarkdown(){
         text: texto
     }
     console.log(datos)
+
+    const request = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(datos)
+    }
+
+    fetch(url, request)
+        .then(
+            response => response.json()
+        )
+        .then(
+            data => document.querySelector('#htmlCode').innerHTML = data
+        )
 }
