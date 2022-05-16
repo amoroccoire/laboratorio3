@@ -1,17 +1,17 @@
 function guardarMarkdown(){
     
     //obtener los datos: titulo y contenido
-    const titulo = document.querySelector('#tituloMarkdown').value
-    const texto = document.querySelector('#contenidoMarkdown').value
+    const titulo = document.querySelector('#tituloMarkdown').value;
+    const texto = document.querySelector('#contenidoMarkdown').value;
     
     if (titulo == '' || texto = '')
         return false;
 
-    const url = 'http://localhost:3000/archivos'
+    const url = 'http://localhost:3000/priv'
     const datos = {
         title: titulo,
         text: texto
-    }
+    };
     console.log(datos);
 
     const request = {
@@ -20,7 +20,7 @@ function guardarMarkdown(){
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(datos)
-    }
+    };
 
     fetch(url, request)
         .then(
