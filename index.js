@@ -27,13 +27,23 @@ app.get('/verMarkdownHtml.js', (request, response) => {
 })
 
 app.get('/contenido', (request, response) => {
-    fs.readFile(path.resolve(__dirname, 'priv/contenido.json'), 'utf-8'),
+    fs.readFile(path.resolve(__dirname, 'priv/contenido.json'), 'utf-8',
     (err, data) => {
         if(err) {
             console.error(err)
             response.status(500).json({
                 error: 'Error'
             })
+            return
         }
-    }
-}
+        console.log(request.body)
+        let markDownText = request.body.text
+        //Mostrar el markDown a la consola
+        console.log(markDownText)
+        let htmlText = md.render(markDownText)
+        response.setHeader('Content-Type', 'application/json')
+        response.end(JSON.stringify({
+            text: htmlText
+        }))
+    })
+})
