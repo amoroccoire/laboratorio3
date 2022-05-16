@@ -36,19 +36,16 @@ app.post('/markdown', (request, response) => {
 });
 
 //parte encargada de guardar el markdown - falta probarlo
-app.post('/', (request, response) => {
-	fs.appendFile('priv/' + request.body.title + '.md', request.body.text, function (err){
+app.post('/archivos', (request, response) => {
+	fs.appendFile(request.body.title + '.md', request.body.text, function (err){
 		if (err){
-			console.error(err)
-			response.status(500).json({ //500 esta bien?
-				error: 'message'
-			})
-			return
+			console.error(err);
+			response.status(500).send('Ha ocurido un error');
 		}
-		response.end(JSON.stringify({
-			text: "Su archivo ha sido guardado con exito"
-		}))
-	})
-})
+	});
+
+	response.setHeader('Content-type', 'html/plain');
+	response.send('Su archivo a sido guardado');
+});
 
 
