@@ -64,12 +64,16 @@
 </theader>
 <tbody>
   <tr><td>I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS
-  </td></tr>
-
-  <tr><td>II. SOLUCIÓN DEL CUESTIONARIO<br>
       <h3>I. Función listar</h3>
       Realizando está función pude darme cuenta y aprender muchas cosas como la importancia de trabajar con funciones asíncronas cuando hacemos fetch a otros contenidos, para que esta función pueda funcionar de una manera correcta tuve que hacer uso de <code>.then(...)</code> para poder trabajar los contenidos a los cuales hicimos fetch.<br>
       Nosotros haciamos fetch al archivo <code>contenido.json</code> que se encontraba en la url <code>http://localhost:3000/contenido</code>, este contenido teniamos que aplicarle la función <code>.json()</code> para poder trabajar los contenidos de una forma más cómoda y poder extraer los títulos de la siguiente manera <code>data.texts[i].title</code> y poder iterar en cada titulo, luego con los strings literales ir construyendo código html que generaría botones para visualizar el contenido <code>Ver Markdown</code> y por último llamaría a la función <code>verMarkdownHtml('title')</code> enviando así el titulo del contenido que queremos ver.
+  </td></tr>
+
+  <tr><td>II. SOLUCIÓN DEL CUESTIONARIO<br>
+      <h4>En el Ejemplo "Hola Mundo" con NodeJS. ¿Qué pasó con la línea: "Content type ..."?</h4>
+      <h4>En los ejercicios. ¿En qué lugar debería estar el archivo poema.txt?</h4>
+      <h4>¿Entiende la expresión regular en el código y se da cuenta de para qué es útil?</h4>
+      <h4>Note que la respuesta del servidor está en formato JSON, ¿Habrá alguna forma de verla directamente?</h4>
     </td></tr>            
   <tr><td>III.CONCLUSIONES 
     </td></tr>
