@@ -6,7 +6,7 @@ const MarkdownIt = require('markdown-it'),
     md = new MarkdownIt();
 
 add.use(express.static('priv'));
-app.use(express.static('pub'));
+app.use(express.static('pub'));//para que index.js acceda a pub/index.html
 
 app.listen(3000, () => {
     console.log("Escuchando en: http://localhost:3000")
@@ -35,11 +35,12 @@ app.post('/markdown', (request, response) => {
 	}))
 });
 
+//parte encargada de guardar el markdown - falta probarlo
 app.post('/', (request, response) => {
 	fs.appendFile('priv/' + request.body.title + '.md', request.body.text, function (err){
 		if (err){
 			console.error(err)
-			response.status(500).json({
+			response.status(500).json({ //500 esta bien?
 				error: 'message'
 			})
 			return
