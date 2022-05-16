@@ -20,6 +20,10 @@ app.get('/contenido', (request, response) => {
 	response.sendFile(path.resolve(__dirname, 'priv/contenido.json'));
 });
 
+app.get('/listMarkdown.js', (request, response) => {
+	response.sendFile(path.resolve(__dirname, 'listMarkdown.js'))
+});
+
 app.post('/markdown', (request, response) => {
 	let markDownText = request.body.text;
 	let htmlText = md.render(markDownText);
