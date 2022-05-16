@@ -6,7 +6,7 @@ function guardarMarkdown(){
 
     const url = 'http://localhost:3000/priv'
     const datos = {
-        title: titulo
+        title: titulo,
         text: texto
     }
     console.log(datos)
