@@ -36,7 +36,7 @@ app.post('/markdown', (request, response) => {
 });
 
 //parte encargada de guardar el markdown - falta probarlo
-app.post('/archivos', (request, response) => {
+app.post('/archivos', (request, response) => { //'/archivos' debe ser creado al nivel de la carpeta pub/
 	fs.appendFile(request.body.title + '.md', request.body.text, function (err){
 		if (err){
 			console.error(err);
