@@ -72,8 +72,11 @@
   <tr><td>II. SOLUCIÓN DEL CUESTIONARIO<br>
       <h4>En el Ejemplo "Hola Mundo" con NodeJS. ¿Qué pasó con la línea: "Content type ..."?</h4>
       <h4>En los ejercicios. ¿En qué lugar debería estar el archivo poema.txt?</h4>
+      <li>En el ejercicio el archivo <code>poema.txt</code> debería ir dentro del directorio <code>priv</code> y podemos hacerle fetch con la url <code>http://localhost:3000/recitar</code>.</li>
       <h4>¿Entiende la expresión regular en el código y se da cuenta de para qué es útil?</h4>
+      <li>En el ejercicio del poema se encuentra la función <code>.replace(/\n/g, '&ltbr&gt')</code> la cual está tomando dos parámetros, el primero es la expresión regular que encuentra cada salto de línea <code>\n</code> y lo reemplaza con el segundo parametro <code>&ltbr&gt</code>, al hacer este reemplazo cuando hacemos el fetch e insertamos el contenido en html se generan los saltos de línea.</li>
       <h4>Note que la respuesta del servidor está en formato JSON, ¿Habrá alguna forma de verla directamente?</h4>
+      <li>Podemos imprimirla con un <code>console.log()</code> despues de aplicarle la función <code>JSON.stringify()</code> y nos retorna el contenido pero en forma de string para poder imprimirlo.</li>
     </td></tr>            
   <tr><td>III.CONCLUSIONES 
     </td></tr>
