@@ -35,13 +35,26 @@ app.post('/markdown', (request, response) => {
 	}))
 });
 
-//parte encargada de guardar el markdown - falta probarlo
-app.post('/archivos', (request, response) => { //'/archivos' debe ser creado al nivel de la carpeta pub/
-	fs.appendFile(request.body.title + '.md', request.body.text, function (err){
-		if (err){
-			console.error(err);
-			response.status(500).send('Ha ocurido un error');
+app.post('/priv', (request, response) => {
+	
+	fs.readFile('contenido.json', function(err, data){
+		
+		let contenido = {texts: []};
+
+		if(err){
+			response.send('Ha ocurrido un error');
 		}
+
+		contenido = JSON.parse(data);
+		contenido.texts.Push({title: request.body.title, text: request.body.text});
+		let json = JSON.stringify(contenido);
+
+		fs.writeFile('contenido.json', json, function(err){
+			if(err){
+				response.send('Ha ocurrido un error');
+			}
+		});
+
 	});
 
 	response.setHeader('Content-type', 'html/plain');
