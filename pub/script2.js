@@ -4,7 +4,7 @@ function guardarMarkdown(){
     const titulo = document.querySelector('#tituloMarkdown').value
     const texto = document.querySelector('#contenidoMarkdown').value
 
-    const url = 'http://localhost:3000/'
+    const url = 'http://localhost:3000/priv'
     const datos = {
         title: titulo
         text: texto
@@ -22,8 +22,8 @@ function guardarMarkdown(){
     fetch(url, request)
         .then(
             response => response.json()
-        )
-        .then(
-            data => document.querySelector('#htmlCode').innerHTML = data
+        
+        ).then(
+            data => {document.querySelector('#htmlCode').innerHTML = data}
         )
 }
