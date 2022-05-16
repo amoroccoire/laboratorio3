@@ -20,3 +20,8 @@ app.listen(3000, () => {
 app.get('/', (request, response) => {
 	response.sendFile(path.resolve(__dirname, 'index.html'))
 });
+
+//Para que desde index.html se conecte con mi javascript(verMardownHtml.js)
+app.get('/verMarkdownHtml.js', (request, response) => {
+    response.sendFile(path.resolve(__dirname, 'verMarkdownHtml.js'))
+})
