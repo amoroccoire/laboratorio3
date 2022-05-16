@@ -5,6 +5,12 @@ function listMarkdown () {
 	fetch(url).then(
 		(response) => {return response.json();}
 	).then(
-		(data) => {console.log(data){
+		(data) => {
+			let listHtml = '';
+			for (let i = 0; i < data.texts.length; i++){
+				let title = data.texts[i].title;
+				listHtml += `<h3>${title}</h3>\n<button onclick='verMarkdownHtml("${title}")'>Ver Markdown</button><hr>\n`;
+			}
+		}
 	);
 }
