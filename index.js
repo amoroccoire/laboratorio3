@@ -25,3 +25,15 @@ app.get('/', (request, response) => {
 app.get('/verMarkdownHtml.js', (request, response) => {
     response.sendFile(path.resolve(__dirname, 'verMarkdownHtml.js'))
 })
+
+app.get('/contenido', (request, response) => {
+    fs.readFile(path.resolve(__dirname, 'priv/contenido.json'), 'utf-8'),
+    (err, data) => {
+        if(err) {
+            console.error(err)
+            response.status(500).json({
+                error: 'Error'
+            })
+        }
+    }
+}
