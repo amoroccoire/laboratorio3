@@ -94,7 +94,7 @@
        Se trabajó con aplicaciones pruebas, fuera del repositorio local, al menos así con algunos compañeros. Los commits fueron hechos después de haber hecho esas pruebas, al menos así con algunos integrantes del grupo.
        </li>
        <li>
-           Se trabajó con aplicaciones pruebas, fuera del repositorio local, al menos así con algunos compañeros. Los commits fueron hechos después de haber hecho esas pruebas, al menos así con algunos integrantes del grupo.
+           Dado que JavaScript se puede ejecutar tanto del lado del servidor como del cliente, entónces es posible crear aplicaciones de BackEnd y FrontEnd con un solo lenguaje, además nodejs es potenciado si se implementan frameworks
        </li>
        <li>
        .
