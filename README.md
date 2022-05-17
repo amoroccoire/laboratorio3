@@ -66,16 +66,12 @@
   <tr><td>I. SOLUCIÓN DE EJERCICIOS/PROBLEMAS
       <h3>I. Función listar</h3>
       Realizando está función pude darme cuenta y aprender muchas cosas como la importancia de trabajar con funciones asíncronas cuando hacemos fetch a otros contenidos, para que esta función pueda funcionar de una manera correcta tuve que hacer uso de <code>.then(...)</code> para poder trabajar los contenidos a los cuales hicimos fetch.<br>
-      Nosotros haciamos fetch al archivo <code>contenido.json</code> que se encontraba en la url <code>http://localhost:3000/contenido</code>, a este contenido teníamos que aplicarle la función <code>.json()</code> para poder trabajar los contenidos de una forma más cómoda y poder extraer los títulos de la siguiente manera <code>data.texts[i].title</code> y poder iterar en cada título, luego con los strings literales ir construyendo código html que generaría botones para visualizar el contenido <code>Ver Markdown</code> y por último llamaría a la función <code>verMarkdownHtml('title')</code> enviando así el título del contenido que queremos ver.
+      Nosotros haciamos fetch al archivo <code>contenido.json</code> que se encontraba en la url <code>http://localhost:3000/contenido</code>, este contenido teniamos que aplicarle la función <code>.json()</code> para poder trabajar los contenidos de una forma más cómoda y poder extraer los títulos de la siguiente manera <code>data.texts[i].title</code> y poder iterar en cada titulo, luego con los strings literales ir construyendo código html que generaría botones para visualizar el contenido <code>Ver Markdown</code> y por último llamaría a la función <code>verMarkdownHtml('title')</code> enviando así el titulo del contenido que queremos ver.
       <br>
       <h3>II. Funcion guardar</h3>
-      Para lograr guardar un nuevo contenido en el servidor, se obtienen los valores de las entradas a traves de <code>document.querySelector(<#selector>).value</code> estos valores son almacenados en la variable datos, y estos datos son guardados en la varibale request en las sección body. Finalmente 'url' y 'request' son pasados como parámetros a fetch, este se encargará de enviar una petición post y recibirá un mensaje por parte del sevidor.
+      Para guardar el nuevo contenido en el servidor, se obtienen los valores de las entradas a través de <code>document.querySelector(<#selector>).value</code> estos valores son almacenados en la variable datos, y edicho dato es guardado en la variable request en las seccion body. Finalmente 'url' y 'request' son pasados como parametros a fetch, este se encargara de enviar una peticion post y resivirá un mensaje por parte del sevidor.
       <br>
-      En el lado del servidor, se localiza al archivo .json y se abre para lectura, este es transformado a un objeto Json para utilizar el método push e insertar un nuevo elemento (contenido nuevo), después se abre el archivo .json para escritura, el objeto es transformado a formato Json y se inserta en el archivo. Si no ocurren errores se envia un mensaje de aceptación.<br>
-      <h3>III. Función ver Markdown en Html</h3>
-      La función <code>verMarkdownHtml()</code> no nos fue posible hacerlo funcional del todo, módulos como <code>markdown-it</code>, fueron algo nuevo, incluso requerían otra instalación. La información sobre esta instalación fue sacada de <a href=” https://www.npmjs.com/package/markdown-it?activeTab=readme”> aquí</a>. La base de este problema, el uso de markdown-it, fue inspiración del último ejemplo de Laboratorio 3.<br> 
-      Lo que se pretendía hacer era devolver el texto que pertenecía al título que se recibió como parámetro en la función <code>verMarkdownHtml</code>.Ya que todo lo que se ingresaba se guardaba en un array, en un archivo <code>.json</code>, se hizo un bucle para buscar el título y de acuerdo a ello sacar el texto Markdown. Posteriormente, devolver ese texto con formato html (acción en teoría realizada con markdown-it) y mostrarlo por el lado del cliente.
-
+      En el lado del servidor, se localiza al archivo .json y se abre para lectura, este es transformado a un objeto Json para utilizar el metodo push e insertar un nuevo elemento (contenido nuevo), después se habre el archivo .json para escritura y el objeto es transformado con <code>JSON.stringify(<objeto>)</code> y se escribe en el archivo, si no ocurren errores se envia un mensaje de aceptación.
   </td></tr>
 
   <tr><td>II. SOLUCIÓN DEL CUESTIONARIO<br>
@@ -87,7 +83,10 @@
       <h4>Note que la respuesta del servidor está en formato JSON, ¿Habrá alguna forma de verla directamente?</h4>
       <li>Podemos imprimirla con un <code>console.log()</code> despues de aplicarle la función <code>JSON.stringify()</code> y nos retorna el contenido pero en forma de string para poder imprimirlo.</li>
     </td></tr>            
-  <tr><td>III.CONCLUSIONES 
+  <tr><td>III.CONCLUSIONES
+      <ul>
+          <li>Dado que JavaScript se puede ejecutar tanto del lado del servidor como del cliente, entónces es posible crear aplicaciones de BackEnd y FrontEnd con un solo lenguaje, además nodejs es potenciado si se implementan frameworks.</li>
+      </ul>
     </td></tr>
 </tbody>
 </table>
