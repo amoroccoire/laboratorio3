@@ -12,8 +12,8 @@ function verMarkdownHtml(tituloMarkdown) {
             let contentMarkdown = "";  //Aquí se almacenará el contenido Markdown
             
             //Bucle que recorra en el array json para almacenar el contenido respecto al título
-            for(let i = 0; i < markdownJson.texts.length; i++) {
-                if(tituloMarkdown == markdownJson.texts[i].title) {
+            for(let i = 0; i < data.texts.length; i++) {
+                if(tituloMarkdown == data.texts[i].title) {
                     contentMarkdown = `<br><h2>${data.texts[i].text}</h2>`;
                 }
             }
