@@ -93,7 +93,7 @@
        Se trabajó con aplicaciones pruebas, fuera del repositorio local, al menos así con algunos compañeros. Los commits fueron hechos después de haber hecho esas pruebas, al menos así con algunos integrantes del grupo.
        </li>
        <li>
-       .
+           Se trabajó con aplicaciones pruebas, fuera del repositorio local, al menos así con algunos compañeros. Los commits fueron hechos después de haber hecho esas pruebas, al menos así con algunos integrantes del grupo.
        </li>
        <li>
        .
