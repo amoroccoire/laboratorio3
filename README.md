@@ -80,6 +80,7 @@
 
   <tr><td>II. SOLUCIÓN DEL CUESTIONARIO<br>
       <h4>En el Ejemplo "Hola Mundo" con NodeJS. ¿Qué pasó con la línea: "Content type ..."?</h4>
+      <li>En el ejemplo del Hola Mundo, el cliente solo está recibiendo "Hola Mundo", a diferencia de cuando trabajamos con archivos, por ejemplo, cuando trabajamos con JSON tenemos que especificar con lo siguiente <code>.setHeader('Content-Type', 'application/json')</code> donde indicamos el tipo de contenido.
       <h4>En los ejercicios. ¿En qué lugar debería estar el archivo poema.txt?</h4>
       <li>En el ejercicio el archivo <code>poema.txt</code> debería ir dentro del directorio <code>priv</code> y podemos hacerle fetch con la url <code>http://localhost:3000/recitar</code>.</li>
       <h4>¿Entiende la expresión regular en el código y se da cuenta de para qué es útil?</h4>
