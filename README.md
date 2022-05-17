@@ -88,7 +88,17 @@
       <li>Podemos imprimirla con un <code>console.log()</code> despues de aplicarle la función <code>JSON.stringify()</code> y nos retorna el contenido pero en forma de string para poder imprimirlo.</li>
     </td></tr>            
   <tr><td>III.CONCLUSIONES 
-      - Se trabajó con aplicaciones pruebas, fuera del repositorio local, al menos así con algunos compañeros. Los commits fueron hechos después de haber hecho esas pruebas, al menos así con algunos integrantes del grupo.
+      <ul>
+       <li>
+       Se trabajó con aplicaciones pruebas, fuera del repositorio local, al menos así con algunos compañeros. Los commits fueron hechos después de haber hecho esas pruebas, al menos así con algunos integrantes del grupo.
+       </li>
+       <li>
+       .
+       </li>
+       <li>
+       .
+       </li>
+      </ul>
     </td></tr>
 </tbody>
 </table>
