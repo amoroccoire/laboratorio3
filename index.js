@@ -1,20 +1,29 @@
 const fs = require('fs');
 const path = require('path');
 const express = require('express');
-const app = express();
+const bp = require('body-parser');
 const MarkdownIt = require('markdown-it'),
-    md = new MarkdownIt();
+    md = new MarkdownIt()
+const app = express();
 
-add.use(express.static('priv'));
+app.use(express.static('priv'))
+app.use(bp.json())
+app.use(bp.urlencoded({
+    extended: true
+}))
 
 app.listen(3000, () => {
-    console.log("Escuchando en: http://localhost:3000")
-
+	console.log('Escuchando en: http://localhost:3000')
 });
 
 app.get('/', (request, response) => {
-    response.sendFile(path.resolve(__dirname, 'index.html'));
+	response.sendFile(path.resolve(__dirname, 'index.html'))
 });
+
+//Para que desde index.html se conecte con mi javascript(verMardownHtml.js)
+app.get('/verMarkdownHtml.js', (request, response) => {
+    response.sendFile(path.resolve(__dirname, 'verMarkdownHtml.js'))
+})
 
 app.get('/contenido', (request, response) => {
 	response.header('Content-Type', 'application/json');
@@ -63,5 +72,4 @@ app.post('/priv', (request, response) => {
 	response.setHeader('Content-type', 'html/plain');
 	response.send('Su archivo a sido guardado');
 });
-
 
