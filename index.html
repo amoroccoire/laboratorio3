@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Markdown</title>
+	<meta charset="utf-8">
+	<script src='guardarMarkdown.js'></script>
+	<script src='listMarkdown.js'></script>
+	<script src='verMarkdownHtml.js'></script>
+</head>
+<body>
+	<h1>Textos Markdown disponibles</h1><br><hr>
+	<button onclick='listMarkdown()'>Listar textos</button>
+	<div id='list'></div><br><hr>
+	<div id='contenido'></div><br>
+	<h1>Ingrese un nuevo texto markdown</h1><br><hr>
+	<label for='tituloMarkdown'>Titulo</label><br>
+	<input type='text' id='tituloMarkdown' name='tituloMarkdown'><br><br>
+	<label for='contenidoMarkdown'>Ingrese texto</label><br>
+	<textarea id='contenidoMarkdown' name='contenidoMarkdown' rows='4' cols='50'></textarea><br>
+	<button onclick='guardarMarkdown()'>Guardar</button>
+</body>
+</html>
