@@ -34,6 +34,10 @@ app.post('/markdown', (request, response) => {
 	}))
 });
 
+app.get('/guardarMarkdown.js', (request, response) => {
+    response.sendFile(path.resolve(__dirname, 'guardarMarkdown.js'))
+});
+
 app.post('/priv', (request, response) => {
 	
 	fs.readFile('contenido.json', function(err, data){
