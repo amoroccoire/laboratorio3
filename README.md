@@ -94,10 +94,16 @@
        Se trabajó con aplicaciones pruebas, fuera del repositorio local, al menos así con algunos compañeros. Los commits fueron hechos después de haber hecho esas pruebas, al menos así con algunos integrantes del grupo.
        </li>
        <li>
-           Dado que JavaScript se puede ejecutar tanto del lado del servidor como del cliente, entónces es posible crear aplicaciones de BackEnd y FrontEnd con un solo lenguaje, además nodejs es potenciado si se implementan frameworks
+           Dado que JavaScript se puede ejecutar tanto del lado del servidor como del cliente, entonces es posible crear aplicaciones de BackEnd y FrontEnd con un solo lenguaje, además nodejs es potenciado si se implementan frameworks como express.
        </li>
        <li>
-       .
+       Node puede ejecutar varias acciones al mismo tiempo, pudiendo así establecer una mejor comunicación con varios clientes al mismo tiempo sin preocuparse por el estado de cada proceso.
+       </li>
+       <li>
+       Fetch nos permite traer información a través de peticiones, brinda una forma sencilla y lógica de obtener datos de forma asíncrona por la red, como lo hemos llevado a cabo en este trabajo con los archivos creados.
+       </li>
+       <li>
+       Aún hay mucho por descubrir y entender de Node. Este trabajo fue realizado con incertidumbres e incógnitas en el proceso, culminando con discrepancias en el mismo, la presurosa unión y acoplamiento de cada función.  
        </li>
       </ul>
     </td></tr>
