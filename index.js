@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const express = require('express');
 const bp = require('body-parser');
-const { response } = require('express');
 const MarkdownIt = require('markdown-it'),
     md = new MarkdownIt()
 const app = express();
@@ -40,6 +39,7 @@ app.get('/contenido', (request, response) => {
         let markDownText = request.body.text
         //Mostrar el markDown a la consola
         console.log(markDownText)
+        //Transformar el markdown en html
         let htmlText = md.render(markDownText)
         response.setHeader('Content-Type', 'application/json')
         response.end(JSON.stringify({
